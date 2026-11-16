@@ -60,8 +60,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
 async def myid(update: Update, context: ContextTypes.DEFAULT_TYPE):
     # This returns only the ID of the person who invoked the command, to configure the bot owner.
     await update.message.reply_text(
-        f"ID этого чата: `{update.effective_chat.id}`",
-        parse_mode="Markdown",
+        f"ID этого чата: {update.effective_chat.id}",
     )
 
 
