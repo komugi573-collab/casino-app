@@ -437,6 +437,7 @@ async def cancel_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 
 def main():
+    init_db()
     app = Application.builder().token(BOT_TOKEN).build()
     conversation = ConversationHandler(
         entry_points=[CommandHandler("start", start)],
